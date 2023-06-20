@@ -1,5 +1,5 @@
-import MainScreen from './src/screens/MainScreen';
 import React from 'react';
+import MainScreen from '@screens/MainScreen';
 
 function App(): JSX.Element {
   return <MainScreen />;
