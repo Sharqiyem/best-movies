@@ -1,8 +1,8 @@
 import React from 'react';
-import MainScreen from '@screens/MainScreen';
+import RootNavigator from '@src/navigation';
 
 function App(): JSX.Element {
-  return <MainScreen />;
+  return <RootNavigator />;
 }
 
 export default App;
