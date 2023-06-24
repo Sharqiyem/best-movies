@@ -1,35 +1,20 @@
-import React, {useState} from 'react';
-import {SafeAreaView, View, TextInput, StatusBar} from 'react-native';
+import React from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
 import {HomeList} from '@src/components/HomeList';
+import Search from '@src/components/Search/Search';
+import {SearchType} from '@src/types/Search';
+import Config from 'react-native-config';
 
 function MainScreen(): JSX.Element {
-  const [searchTerm, setSearchTerm] = useState('');
-
   return (
     <View className="flex-1 bg-red-500">
       <SafeAreaView className="flex-1 bg-orange-50">
-        <StatusBar
-          barStyle="dark-content"
-          hidden={false}
-          backgroundColor="#772ea2"
-          translucent={true}
-        />
-        <View className="w-full p-2 h-[60]">
-          <TextInput
-            className="text-sm w-full bg-gray-200  py-3 px-5 rounded-full"
-            placeholder="Enter movie title"
-            value={searchTerm}
-            onChangeText={setSearchTerm}
-          />
+        <View className="absolute min-h-[70] w-full top-5 z-40">
+          <Search type={SearchType.movie} />
         </View>
-        {/* <Button
-          title="heee"
-          onPress={() => {
-            navigation.navigate('Modal');
-          }}
-        /> */}
-
-        <View>
+        <View className="z-10 pt-4  top-[60]">
+          <Text>API:{Config.API_URL}</Text>
+          <Text>ENV:{Config.ENV}</Text>
           <HomeList />
         </View>
       </SafeAreaView>

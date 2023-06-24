@@ -22,6 +22,7 @@ export const HomeList = (): JSX.Element => {
   const renderSection = ({item: listItem}: {item: {list: Movie[]}}) => {
     return (
       <FlatList
+        showsVerticalScrollIndicator={false}
         style={styles.list}
         horizontal={false}
         data={listItem.list}
@@ -34,18 +35,21 @@ export const HomeList = (): JSX.Element => {
 
   const renderSectionHeader = ({section}: {section: {title: string}}) => {
     return (
-      <Text className="text-2xl font-bold mx-3 bg-gray-100">
+      <Text className="text-3xl mx-3 font-bold bg-gray-100">
         {section.title}
       </Text>
     );
   };
 
   return (
-    <SectionList
-      sections={homeSections}
-      renderSectionHeader={renderSectionHeader}
-      renderItem={renderSection}
-    />
+    <>
+      <SectionList
+        showsVerticalScrollIndicator={false}
+        sections={homeSections}
+        renderSectionHeader={renderSectionHeader}
+        renderItem={renderSection}
+      />
+    </>
   );
 };
 

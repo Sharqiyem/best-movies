@@ -1,13 +1,13 @@
 import {useRoute} from '@react-navigation/native';
 import {ModalScreenRouteProp} from '@src/navigation/types';
 import React from 'react';
-import {SafeAreaView, View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {MovieData} from '@data/Movie';
 
 function ModalScreen(): JSX.Element {
   const route = useRoute<ModalScreenRouteProp>();
-  const {title, link, img} = route.params;
+  const {title, img} = route.params;
 
   const keys = Object.keys(MovieData);
 
@@ -29,12 +29,14 @@ function ModalScreen(): JSX.Element {
         </View>
         <View className="p-2 w-full">
           {keys.map(item => (
-            <View>
-              <Text className="capitalize text-xl text-red-500 font-semibold">
+            <View
+              key={item}
+              className="flex-1 flex-row items-center py-3  text-white gap-1 border-b-orange-100 border-b-2">
+              <Text className="capitalize text-blue-500 font-semibold">
                 {item}:{' '}
-                <Text className="text-sm text-orange-600 ">
-                  {MovieData[item]}
-                </Text>
+              </Text>
+              <Text className="text-sm text-white-600 flex-1">
+                {MovieData[item]}
               </Text>
             </View>
           ))}

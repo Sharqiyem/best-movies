@@ -7,10 +7,9 @@ import MainScreen from '@src/screens/Home/MainScreen';
 import TagsScreen from '@src/screens/Tags/TagsScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HomeStackNavigatorParamList} from './types';
-import ModalScreen from '@src/screens/Modal/ModalScreen';
 
 const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator<HomeStackNavigatorParamList>();
+export const Stack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 
 const TabIcon = ({
   size,
@@ -22,13 +21,13 @@ const TabIcon = ({
   color: string;
   name: string;
 }) => {
-  let iconName = 'user';
+  let iconName = '';
   if (name === 'Home') {
     iconName = 'home';
   } else if (name === 'Tags') {
     iconName = 'tags';
-  } else if (name === 'Profile') {
-    iconName = 'user';
+  } else if (name === 'Favorites') {
+    iconName = 'heart';
   }
   return <FontAwesome name={iconName} size={size} color={color} />;
 };
@@ -47,55 +46,9 @@ export const RootTabs = () => {
         // eslint-disable-next-line react/no-unstable-nested-components
         tabBarIcon: props => <TabIcon {...props} name={route.name} />,
       })}>
-      <Tab.Screen
-        name="Home"
-        // options={{
-        //   tabBarIcon: ({color, size}) => (
-        //     <FontAwesome name="home" color={color} size={size} />
-        //   ),
-        // }}
-        component={MainScreen}
-      />
-      <Tab.Screen
-        name="Tags"
-        // options={{
-        //   tabBarIcon: ({color, size}) => (
-        //     <FontAwesome name="tags" color={color} size={size} />
-        //   ),
-        // }}
-        component={TagsScreen}
-      />
-      <Tab.Screen
-        name="Prpfile"
-        // options={{
-        //   tabBarIcon: ({color, size}) => (
-        //     <FontAwesome name="user" color={color} size={size} />
-        //   ),
-        // }}
-        component={MainScreen}
-      />
+      <Tab.Screen name="Home" component={MainScreen} />
+      <Tab.Screen name="Tags" component={TagsScreen} />
+      <Tab.Screen name="Favorites" component={MainScreen} />
     </Tab.Navigator>
-  );
-};
-
-export const HomeStackNavigator = () => {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Main"
-        component={RootTabs}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Modal"
-        component={ModalScreen}
-        options={{
-          headerShown: false,
-          presentation: 'modal',
-        }}
-      />
-    </Stack.Navigator>
   );
 };
