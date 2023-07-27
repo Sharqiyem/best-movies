@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Animated, {
@@ -99,5 +99,3 @@ const MainScreen2 = () => {
 };
 
 export default MainScreen2;
-
-const styles = StyleSheet.create({});

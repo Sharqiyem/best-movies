@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {
   ActivityIndicator,
   FlatList as RNFlatList,
@@ -13,10 +13,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {styled} from 'nativewind';
-import {useNavigation} from '@react-navigation/native';
 import {TagItem} from '@src/components';
 import {Colors} from '@src/constants/colors';
-import {ListNativeStackNavigationProp} from '@src/navigation/types';
 import {MovieItem} from '@src/components';
 import {Movie} from '@src/types';
 
