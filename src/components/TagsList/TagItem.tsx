@@ -1,27 +1,51 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Pressable, Text} from 'react-native';
 import FastImage from 'react-native-fast-image';
+import LinearGradient from 'react-native-linear-gradient';
+import {useNavigation} from '@react-navigation/native';
+import {TagNativeStackNavigationProp} from '@src/navigation/types';
+import {ItemProps} from '@src/types/ItemProps';
+import {API_BASE_URL} from '@src/config/api.config';
 
-type TagProp = {
-  title: string;
-  link?: string;
-  img: string;
-};
+export const TagItem = ({title, img, link}: ItemProps) => {
+  // console.log('TagItem', {title, img, link});
+  if (!img?.startsWith('http')) {
+    img = `${API_BASE_URL}/${img}`;
+  }
 
-export const TagItem = ({title, img}: TagProp) => {
+  const navigation = useNavigation<TagNativeStackNavigationProp>();
+
+  const heightClass = 'min-h-[170]';
+
+  const openTag = () => {
+    navigation.push('Tag', {title, img, link});
+  };
+
   return (
-    <View className="bg-gray-100 rounded-t-xl overflow-hidden min-h-[160]">
+    <Pressable
+      onPress={openTag}
+      className={`${heightClass} rounded-t-xl overflow-hidden bg-primary-900/50`}>
       <FastImage
-        className="w-full h-[130]"
+        className={`${heightClass} rounded-t-xl w-full ]`}
         source={{
           uri: img,
           priority: FastImage.priority.normal,
         }}
         resizeMode="stretch"
+        fallback
+        defaultSource={require('../../assets/placeholder-movie.jpeg')}
       />
-      <Text numberOfLines={2} className="text-gray-600 p-2 text-base font-bold">
+      <LinearGradient
+        end={{x: 1, y: 1}}
+        start={{x: 1, y: 0}}
+        className={`${heightClass} z-1 absolute bottom-0 left-0 right-0`}
+        colors={['#00000000', '#00000060']}
+      />
+      <Text
+        numberOfLines={2}
+        className="absolute bottom-0 z-10 text-white p-2 text-base font-bold capitalize">
         {title}
       </Text>
-    </View>
+    </Pressable>
   );
 };

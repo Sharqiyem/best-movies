@@ -1,10 +1,12 @@
 import {BASE_URL} from '@src/config/api.config';
 import {useInfiniteQuery} from '@tanstack/react-query';
 import axios from 'axios';
+import {Place} from '@data/Place';
 
-const getAllTags = async ({pageParam = 1}: {pageParam: number}) => {
-  console.log('Fetching page', pageParam);
-  const response = await axios.get(`${BASE_URL}/tags/${pageParam}`);
+const getAllTags = async ({pageParam = 1}: {pageParam?: number}) => {
+  const url = `${BASE_URL}/tags/${pageParam}`;
+  console.log('Fetching tags page', url);
+  const response = await axios.get(url);
   return response.data;
 };
 
@@ -18,9 +20,10 @@ export const UseGetAllTags = () => {
     fetchNextPage,
     status,
     error,
-  } = useInfiniteQuery(['allTags1'], getAllTags, {
+    refetch,
+  } = useInfiniteQuery(['allTags'], getAllTags, {
     onError(err) {
-      console.log('error', err);
+      console.log('UseGetAllTags ERROR===', err);
     },
 
     getNextPageParam: lastPage => {
@@ -39,5 +42,19 @@ export const UseGetAllTags = () => {
     fetchNextPage,
     status,
     error,
+    refetch,
+  };
+};
+
+export const UseFakeGetAllTags = () => {
+  return {
+    isLoading: false,
+    error: 'null',
+    hasNextPage: false,
+    fetchNextPage: null,
+    data: {pages: [{data: Place[0]}]},
+    refetch: null,
+    isFetchingNextPage: false,
+    isRefetching: false,
   };
 };

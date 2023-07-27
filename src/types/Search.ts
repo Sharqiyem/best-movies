@@ -1,7 +1,7 @@
 export interface SearchResult {
-  label: string;
-  url: string;
-  thumb?: string;
+  title: string;
+  link: string;
+  img: string;
 }
 
 export enum SearchType {

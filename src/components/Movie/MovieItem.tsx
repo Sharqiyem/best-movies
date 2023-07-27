@@ -1,37 +1,115 @@
-import {useNavigation} from '@react-navigation/native';
-import {ModalScreenRouteProp} from '@src/navigation/types';
-import React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import React, {memo, useCallback, useRef} from 'react';
+import {Pressable, Text, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
+import {SharedElement} from 'react-navigation-shared-element';
+import LinearGradient from 'react-native-linear-gradient';
+import {useNavigation} from '@react-navigation/native';
+import {MovieNativeStackNavigationProp} from '@src/navigation/types';
+import {API_BASE_URL} from '@src/config/api.config';
+import {ItemProps} from '@src/types/ItemProps';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {BottomSheetModal} from '@gorhom/bottom-sheet';
+import {MovieBottomActionModal} from '../MovieBottomActionModal';
+import {Rating} from 'react-native-ratings';
 
-type MovieProps = {
-  title: string;
-  link?: string;
-  img: string;
-};
-
-export const MovieItem = ({title, img}: MovieProps) => {
-  const navigation = useNavigation<ModalScreenRouteProp>();
-
-  const openMovie = () => {
-    navigation.navigate('Modal', {title, img, link: ''});
-  };
-
+const moviePropsAreEqual = (
+  prevMovieItem: ItemProps,
+  nextMovieItem: ItemProps,
+) => {
   return (
-    <TouchableOpacity
-      onPress={openMovie}
-      className="bg-gray-100 rounded-t-xl overflow-hidden min-h-[260]">
-      <FastImage
-        className="w-full h-[200]"
-        source={{
-          uri: img,
-          priority: FastImage.priority.normal,
-        }}
-        resizeMode="stretch"
-      />
-      <Text numberOfLines={2} className="text-gray-600 p-2 text-base font-bold">
-        {title}
-      </Text>
-    </TouchableOpacity>
+    prevMovieItem.title === nextMovieItem.title &&
+    prevMovieItem.img === nextMovieItem.img &&
+    prevMovieItem.link === nextMovieItem.link &&
+    prevMovieItem.rating === nextMovieItem.rating &&
+    prevMovieItem.votes === nextMovieItem.votes
   );
 };
+
+export const MovieItem = memo(
+  ({title, img, link, rating, votes}: ItemProps) => {
+    if (!img?.startsWith('http')) {
+      img = `${API_BASE_URL}/${img}`;
+    }
+    const heightClass = 'min-h-[300]';
+
+    const navigation = useNavigation<MovieNativeStackNavigationProp>();
+
+    const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+
+    const handlePresentModalPress = useCallback((item: any) => {
+      bottomSheetModalRef.current?.present(item);
+    }, []);
+
+    const openMovie = () => {
+      navigation.push('Movie', {title, img, link});
+    };
+
+    const openActionModal = () => {
+      const itemToSave = {title, img, link};
+      handlePresentModalPress(itemToSave);
+    };
+
+    return (
+      <>
+        <Pressable
+          onPress={openMovie}
+          className={`${heightClass} rounded-t-xl bg-primary-900/50 overflow-hidden`}>
+          <Pressable
+            onPress={openActionModal}
+            className="absolute top-0 right-0 bg-[#000000a9] p-2 overflow-hidden z-40 rounded-bl-xl">
+            <MaterialIcons name="playlist-add" size={20} color={'#fff'} />
+          </Pressable>
+          <SharedElement id={`item.${link}.photo`}>
+            <FastImage
+              className={`${heightClass}`}
+              source={{
+                uri: img,
+                priority: FastImage.priority.normal,
+              }}
+              resizeMode="stretch"
+              fallback
+              defaultSource={require('../../assets/placeholder-movie.jpeg')}
+            />
+          </SharedElement>
+          <LinearGradient
+            end={{x: 1, y: 1}}
+            start={{x: 1, y: 0}}
+            className={`${heightClass} z-1 absolute bottom-0 left-0 right-0`}
+            colors={['#00000000', '#00000060']}
+          />
+          <View className="p-2 absolute bottom-0 z-10  w-full">
+            <SharedElement
+              // style={{alignItems: 'flex-start'}}
+              id={`item.${link}.title`}>
+              <Text
+                numberOfLines={2}
+                className=" text-white  text-base font-bold">
+                {title}
+              </Text>
+              <View className="flex-row gap-2">
+                <Rating
+                  readonly
+                  type="custom"
+                  ratingCount={5}
+                  // ratingColor="#00000030"
+                  // tintColor="#00000030"
+                  // ratingBackgroundColor="#00000030"
+                  // startingValue={rating ?? 0 / 2}
+                  imageSize={16}
+                />
+                <Text className="text-white">
+                  {rating} ({votes})
+                </Text>
+              </View>
+            </SharedElement>
+          </View>
+        </Pressable>
+        <MovieBottomActionModal
+          selectedItem={{title, img, link, rating, votes}}
+          ref={bottomSheetModalRef}
+        />
+      </>
+    );
+  },
+  moviePropsAreEqual,
+);

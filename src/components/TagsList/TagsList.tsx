@@ -1,20 +1,53 @@
 import React from 'react';
-import {FlatList, Text, View} from 'react-native';
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+  RefreshControl,
+} from 'react-native';
 import {TagItem} from './TagItem';
 import {Tag} from '@src/types/Tag';
-import {UseGetAllTags} from '@src/hooks/getAllTags';
+import {UseFakeGetAllTags, UseGetAllTags} from '@src/hooks/getAllTags';
+import {IS_MOCK} from '@src/config/global';
+import {Colors} from '@src/constants/colors';
 
 export const TagsList = (): JSX.Element => {
-  const {isLoading, error, data, hasNextPage, fetchNextPage} = UseGetAllTags();
+  const {
+    isLoading,
+    data,
+    error,
+    hasNextPage,
+    fetchNextPage,
+    refetch,
+    isFetchingNextPage,
+    isRefetching,
+  } = IS_MOCK ? UseFakeGetAllTags() : UseGetAllTags();
+
+  console.log('DTAA_____', JSON.stringify(data, null, 2));
+
+  const onRefresh = () => {
+    refetch?.();
+  };
 
   const onEndReached = React.useCallback(async () => {
     console.log('fetching more');
     console.log('isFetchingNextPage', hasNextPage, isLoading);
     if (hasNextPage) {
-      await fetchNextPage();
+      await fetchNextPage?.();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hasNextPage]);
+
+  const renderFooter = () => {
+    if (isFetchingNextPage)
+      return (
+        <View className="p-3 justify-center items-center flex-row">
+          <ActivityIndicator color={Colors.primary[900]} className="m-3" />
+        </View>
+      );
+  };
 
   const renderItem = ({item}: {item: Tag}) => {
     return (
@@ -26,9 +59,17 @@ export const TagsList = (): JSX.Element => {
 
   return (
     <>
-      {isLoading ? <Text className="text-center">Loading...</Text> : null}
+      {isLoading ? (
+        <View className="flex-1  justify-center items-center">
+          <ActivityIndicator color={Colors.primary[900]} />
+        </View>
+      ) : null}
       {!isLoading && error ? (
-        <Text className="text-center">{error?.message}</Text>
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-red-600">
+            {(error as {message: string})?.message}
+          </Text>
+        </View>
       ) : null}
       {!isLoading && data?.pages?.[0].data ? (
         <FlatList
@@ -40,8 +81,25 @@ export const TagsList = (): JSX.Element => {
           keyExtractor={item => item.title}
           onEndReachedThreshold={0.1}
           onEndReached={onEndReached}
+          initialNumToRender={5}
+          contentContainerStyle={styles.list}
+          ListFooterComponent={renderFooter}
+          refreshControl={
+            <RefreshControl
+              tintColor={'#fff'}
+              colors={['#fff']}
+              refreshing={isRefetching}
+              onRefresh={onRefresh}
+            />
+          }
         />
       ) : null}
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  list: {
+    paddingBottom: 90,
+  },
+});

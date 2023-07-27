@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* bestsimilarsappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* bestsimilarsappTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-bestsimilarsapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-bestsimilarsapp.a */; };
+		0135749B0C894DE63C6E69FB /* libPods-bestsimilarsapp-bestsimilarsappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A14C2380CB5DBC94FF1838 /* libPods-bestsimilarsapp-bestsimilarsappTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		6B474D202A5B93620006B23D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B474D1F2A5B93620006B23D /* LaunchScreen.storyboard */; };
+		6B474D212A5B93620006B23D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B474D1F2A5B93620006B23D /* LaunchScreen.storyboard */; };
+		6B4D2D522A5B77E6003261F2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D2D512A5B77E6003261F2 /* Dynamic.swift */; };
+		6B4D2D532A5B77E6003261F2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D2D512A5B77E6003261F2 /* Dynamic.swift */; };
+		6B4D2D552A5B7C23003261F2 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B4D2D542A5B7C23003261F2 /* loading.json */; };
+		6B4D2D562A5B7C23003261F2 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B4D2D542A5B7C23003261F2 /* loading.json */; };
 		6BFE62262A475CA800C81069 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		6BFE62272A475CA800C81069 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		6BFE62292A475CA800C81069 /* libPods-bestsimilarsapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-bestsimilarsapp.a */; };
-		6BFE622B2A475CA800C81069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		6BFE622C2A475CA800C81069 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		7699B88040F8A987B510C191 /* libPods-bestsimilarsapp-bestsimilarsappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-bestsimilarsapp-bestsimilarsappTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		E07A17F1F20BB84EE4DD500C /* libPods-bestsimilarsapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51620C00B337FB7E179B031F /* libPods-bestsimilarsapp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,15 +44,19 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = bestsimilarsapp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = bestsimilarsapp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = bestsimilarsapp/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-bestsimilarsapp-bestsimilarsappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bestsimilarsapp-bestsimilarsappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-bestsimilarsapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp.debug.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-bestsimilarsapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp.release.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-bestsimilarsapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bestsimilarsapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A14C2380CB5DBC94FF1838 /* libPods-bestsimilarsapp-bestsimilarsappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bestsimilarsapp-bestsimilarsappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B3F69BB319C7101DC7A7F55 /* Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig"; sourceTree = "<group>"; };
+		497CD5D6A5E2A5A6C9A1E572 /* Pods-bestsimilarsapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp.release.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp.release.xcconfig"; sourceTree = "<group>"; };
+		51620C00B337FB7E179B031F /* libPods-bestsimilarsapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bestsimilarsapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B474D1F2A5B93620006B23D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = bestsimilarsapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B4D2D4F2A5B77E5003261F2 /* bestsimilarsapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bestsimilarsapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B4D2D502A5B77E5003261F2 /* bestsimilarsapp.prod-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bestsimilarsapp.prod-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B4D2D512A5B77E6003261F2 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		6B4D2D542A5B7C23003261F2 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		6BFE62332A475CA800C81069 /* bestsimilarsapp.prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bestsimilarsapp.prod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFE62342A475CA800C81069 /* bestsimilarsapp-prod-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "bestsimilarsapp-prod-Info.plist"; path = "/Users/sharqi/Desktop/src/bestsimilars/bestsimilarsapp/ios/bestsimilarsapp-prod-Info.plist"; sourceTree = "<absolute>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = bestsimilarsapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig"; sourceTree = "<group>"; };
+		C20B5113EA5084244FA804F8 /* Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E4842386299F016A95A696DA /* Pods-bestsimilarsapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bestsimilarsapp.debug.xcconfig"; path = "Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -58,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-bestsimilarsapp-bestsimilarsappTests.a in Frameworks */,
+				0135749B0C894DE63C6E69FB /* libPods-bestsimilarsapp-bestsimilarsappTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-bestsimilarsapp.a in Frameworks */,
+				E07A17F1F20BB84EE4DD500C /* libPods-bestsimilarsapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BFE62292A475CA800C81069 /* libPods-bestsimilarsapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +107,15 @@
 		13B07FAE1A68108700A75B9A /* bestsimilarsapp */ = {
 			isa = PBXGroup;
 			children = (
+				6B474D1F2A5B93620006B23D /* LaunchScreen.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				6B4D2D512A5B77E6003261F2 /* Dynamic.swift */,
+				6B4D2D4F2A5B77E5003261F2 /* bestsimilarsapp-Bridging-Header.h */,
+				6B4D2D502A5B77E5003261F2 /* bestsimilarsapp.prod-Bridging-Header.h */,
 			);
 			name = bestsimilarsapp;
 			sourceTree = "<group>";
@@ -115,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-bestsimilarsapp.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-bestsimilarsapp-bestsimilarsappTests.a */,
+				51620C00B337FB7E179B031F /* libPods-bestsimilarsapp.a */,
+				24A14C2380CB5DBC94FF1838 /* libPods-bestsimilarsapp-bestsimilarsappTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,6 +140,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6B4D2D542A5B7C23003261F2 /* loading.json */,
 				13B07FAE1A68108700A75B9A /* bestsimilarsapp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* bestsimilarsappTests */,
@@ -157,10 +167,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-bestsimilarsapp.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-bestsimilarsapp.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig */,
+				E4842386299F016A95A696DA /* Pods-bestsimilarsapp.debug.xcconfig */,
+				497CD5D6A5E2A5A6C9A1E572 /* Pods-bestsimilarsapp.release.xcconfig */,
+				C20B5113EA5084244FA804F8 /* Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig */,
+				3B3F69BB319C7101DC7A7F55 /* Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -172,12 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "bestsimilarsappTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				A76A76E255E497FC6821547C /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				8B2026FA45CAE515B4986174 /* [CP] Embed Pods Frameworks */,
+				C4EEA9B1575A1128878760A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,14 +203,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "bestsimilarsapp" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				DFED433F285D9E33C0AF0368 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				D7BAA215A2C64773DA33B47A /* [CP] Embed Pods Frameworks */,
+				9FF60118483E61022D806068 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,14 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BFE62302A475CA800C81069 /* Build configuration list for PBXNativeTarget "bestsimilarsapp.prod" */;
 			buildPhases = (
-				6BFE62232A475CA800C81069 /* [CP] Check Pods Manifest.lock */,
 				6BFE62242A475CA800C81069 /* Start Packager */,
 				6BFE62252A475CA800C81069 /* Sources */,
 				6BFE62282A475CA800C81069 /* Frameworks */,
 				6BFE622A2A475CA800C81069 /* Resources */,
 				6BFE622D2A475CA800C81069 /* Bundle React Native code and images */,
-				6BFE622E2A475CA800C81069 /* [CP] Embed Pods Frameworks */,
-				6BFE622F2A475CA800C81069 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,7 +253,10 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1430;
+					};
+					6BFE62222A475CA800C81069 = {
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -282,8 +292,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				6B474D202A5B93620006B23D /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6B4D2D552A5B7C23003261F2 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BFE622B2A475CA800C81069 /* LaunchScreen.storyboard in Resources */,
+				6B474D212A5B93620006B23D /* LaunchScreen.storyboard in Resources */,
 				6BFE622C2A475CA800C81069 /* Images.xcassets in Resources */,
+				6B4D2D562A5B7C23003261F2 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,45 +326,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
-		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6BFE62232A475CA800C81069 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-bestsimilarsapp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 		6BFE62242A475CA800C81069 /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -389,24 +362,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		6BFE622E2A475CA800C81069 /* [CP] Embed Pods Frameworks */ = {
+		8B2026FA45CAE515B4986174 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6BFE622F2A475CA800C81069 /* [CP] Copy Pods Resources */ = {
+		9FF60118483E61022D806068 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,7 +396,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		A76A76E255E497FC6821547C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,7 +418,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		C4EEA9B1575A1128878760A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BAA215A2C64773DA33B47A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFED433F285D9E33C0AF0368 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -465,57 +472,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp/Pods-bestsimilarsapp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bestsimilarsapp-bestsimilarsappTests/Pods-bestsimilarsapp-bestsimilarsappTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -552,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4D2D522A5B77E6003261F2 /* Dynamic.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -561,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4D2D532A5B77E6003261F2 /* Dynamic.swift in Sources */,
 				6BFE62262A475CA800C81069 /* AppDelegate.mm in Sources */,
 				6BFE62272A475CA800C81069 /* main.m in Sources */,
 			);
@@ -579,8 +537,9 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig */;
+			baseConfigurationReference = C20B5113EA5084244FA804F8 /* Pods-bestsimilarsapp-bestsimilarsappTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -606,8 +565,9 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig */;
+			baseConfigurationReference = 3B3F69BB319C7101DC7A7F55 /* Pods-bestsimilarsapp-bestsimilarsappTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = bestsimilarsappTests/Info.plist;
@@ -630,11 +590,14 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-bestsimilarsapp.debug.xcconfig */;
+			baseConfigurationReference = E4842386299F016A95A696DA /* Pods-bestsimilarsapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = bestsimilarsapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,8 +610,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharqiyem.bestsimilars.dev;
 				PRODUCT_NAME = bestsimilarsapp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "bestsimilarsapp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -657,11 +622,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-bestsimilarsapp.release.xcconfig */;
+			baseConfigurationReference = 497CD5D6A5E2A5A6C9A1E572 /* Pods-bestsimilarsapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bestsimilarsapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -673,8 +641,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharqiyem.bestsimilars.dev;
 				PRODUCT_NAME = bestsimilarsapp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "bestsimilarsapp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -682,11 +652,12 @@
 		};
 		6BFE62312A475CA800C81069 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-bestsimilarsapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "bestsimilarsapp-prod-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -699,8 +670,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharqiyem.bestsimilars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "bestsimilarsapp.prod-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -709,11 +682,12 @@
 		};
 		6BFE62322A475CA800C81069 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-bestsimilarsapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "bestsimilarsapp-prod-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,8 +699,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharqiyem.bestsimilars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "bestsimilarsapp.prod-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -761,6 +737,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -833,6 +810,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;

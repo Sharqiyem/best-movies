@@ -1,0 +1,61 @@
+diff --git a/node_modules/react-native-dropdown-select-list/components/MultipleSelectList.tsx b/node_modules/react-native-dropdown-select-list/components/MultipleSelectList.tsx
+index a42ea7d..f6903d9 100644
+--- a/node_modules/react-native-dropdown-select-list/components/MultipleSelectList.tsx
++++ b/node_modules/react-native-dropdown-select-list/components/MultipleSelectList.tsx
+@@ -42,7 +42,8 @@ const MultipleSelectList: React.FC<MultipleSelectListProps> = ({
+         badgeTextStyles,
+         checkBoxStyles,
+         save = 'key',
+-        dropdownShown = false
++        dropdownShown = false,
++        defaultOptions
+     }) => {
+ 
+     const oldOption = React.useRef(null)
+@@ -84,6 +85,33 @@ const MultipleSelectList: React.FC<MultipleSelectListProps> = ({
+         setFilteredData(data);
+       },[data])
+ 
++    React.useEffect(() => {
++        if(!_firstRender && defaultOptions && oldOption.current != "defaultOption.key" ){
++            // oldOption.current != null
++            oldOption.current = "defaultOption.key"
++            setSelected(defaultOptions.map(d=>d.key));
++            setSelectedVal(defaultOptions.map(d=>d.value));
++        }
++        if(defaultOptions && _firstRender && defaultOptions != undefined){
++            
++            oldOption.current = "defaultOption.key"
++    
++            setSelected(defaultOptions.map(d=>d.key));
++            setSelectedVal(defaultOptions.map(d=>d.value));
++
++            if (save === 'value') {
++                setSelected(defaultOptions.map(d=>d.value));
++            } else {
++                setSelected(defaultOptions.map(d=>d.key));
++            }
++            
++
++           
++          
++          
++        }
++        
++    },[defaultOptions])
+ 
+     React.useEffect(() => {
+         if(_firstRender){
+diff --git a/node_modules/react-native-dropdown-select-list/index.d.ts b/node_modules/react-native-dropdown-select-list/index.d.ts
+index d1f4df3..52ab439 100644
+--- a/node_modules/react-native-dropdown-select-list/index.d.ts
++++ b/node_modules/react-native-dropdown-select-list/index.d.ts
+@@ -164,7 +164,7 @@ export interface MultipleSelectListProps  {
+     /**
+     * The default option of the select list
+     */
+-    defaultOption?: { key: any, value: any },
++    defaultOptions?: { key: any, value: any }[],
+ 
+     /**
+     * Pass any JSX to this prop like Text, Image or Icon to show instead of search icon
