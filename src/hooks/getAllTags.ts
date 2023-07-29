@@ -1,14 +1,6 @@
-import {BASE_URL} from '@src/config/api.config';
 import {useInfiniteQuery} from '@tanstack/react-query';
-import axios from 'axios';
 import {Place} from '@data/Place';
-
-const getAllTags = async ({pageParam = 1}: {pageParam?: number}) => {
-  const url = `${BASE_URL}/tags/${pageParam}`;
-  console.log('Fetching tags page', url);
-  const response = await axios.get(url);
-  return response.data;
-};
+import {TagsApi} from '@src/services/tags';
 
 export const UseGetAllTags = () => {
   const {
@@ -21,7 +13,7 @@ export const UseGetAllTags = () => {
     status,
     error,
     refetch,
-  } = useInfiniteQuery(['allTags'], getAllTags, {
+  } = useInfiniteQuery(['allTags'], TagsApi.getAllTags, {
     onError(err) {
       console.log('UseGetAllTags ERROR===', err);
     },
