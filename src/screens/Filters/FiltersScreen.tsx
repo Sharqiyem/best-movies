@@ -119,6 +119,7 @@ function FiltersScreen(): JSX.Element {
         name="search"
         color={isDark ? '#ffffff30' : '#00000030'}
         size={20}
+        // eslint-disable-next-line react-native/no-inline-styles
         style={{paddingRight: 10}}
       />
     ),

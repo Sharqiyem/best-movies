@@ -1,6 +1,6 @@
 import {useNavigation, useRoute} from '@react-navigation/native';
 import React from 'react';
-import {View, Text, FlatList, TouchableOpacity} from 'react-native';
+import {View, Text, FlatList, TouchableOpacity, Platform} from 'react-native';
 import {Movie} from '@src/types';
 import {MovieItem} from '@src/components';
 import {ListScreenRouteProp} from '@src/navigation/types';

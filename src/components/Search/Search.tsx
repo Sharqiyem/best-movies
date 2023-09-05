@@ -172,7 +172,7 @@ export const Search = () => {
       {error ? (
         <View className="flex-1 justify-center items-center ">
           <Lottie
-            style={{width: 200, height: 200}}
+            style={styles.loading}
             source={require('../../assets/anim/connection.json')}
             autoPlay
             loop
@@ -205,4 +205,5 @@ const styles = StyleSheet.create({
   mainFlatListContentContainerStyle: {
     paddingBottom: 120,
   },
+  loading: {width: 200, height: 200},
 });
