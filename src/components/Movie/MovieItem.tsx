@@ -8,9 +8,9 @@ import {MovieNativeStackNavigationProp} from '@src/navigation/types';
 import {API_BASE_URL} from '@src/config/api.config';
 import {ItemProps} from '@src/types/ItemProps';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {BottomSheetModal} from '@gorhom/bottom-sheet';
 import {MovieBottomActionModal} from '../MovieBottomActionModal';
-import {Rating} from 'react-native-ratings';
 
 const moviePropsAreEqual = (
   prevMovieItem: ItemProps,
@@ -86,17 +86,8 @@ export const MovieItem = memo(
                 className=" text-white  text-base font-bold">
                 {title}
               </Text>
-              <View className="flex-row gap-2">
-                <Rating
-                  readonly
-                  type="custom"
-                  ratingCount={5}
-                  // ratingColor="#00000030"
-                  // tintColor="#00000030"
-                  // ratingBackgroundColor="#00000030"
-                  // startingValue={rating ?? 0 / 2}
-                  imageSize={16}
-                />
+              <View className="flex-row gap-1 items-center">
+                <FontAwesome5 name="signal" size={10} color={'#fff'} />
                 <Text className="text-white">
                   {rating} ({votes})
                 </Text>
