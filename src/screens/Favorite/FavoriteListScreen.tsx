@@ -45,7 +45,11 @@ function FavoriteListScreen(): JSX.Element {
     <SafeAreaView className="flex-1  dark:bg-slate-800">
       <View className="z-10 mt-4 flex-row items-center px-3">
         <Pressable onPress={goBack} className="w-7 h-7  justify-center">
-          <Ionicons name="arrow-back" size={24} color="#fff" />
+          <Ionicons
+            name="arrow-back"
+            size={24}
+            className="dark:text-white/70 text-black/70"
+          />
         </Pressable>
         <Text className="text-3xl mx-3 font-bold dark:text-white capitalize">
           {listItems?.label}

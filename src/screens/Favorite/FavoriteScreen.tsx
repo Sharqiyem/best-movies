@@ -82,7 +82,9 @@ function FavoriteScreen(): JSX.Element {
           renderItem={renderItem}
           keyExtractor={(_, index) => `${list.key}-List-${index.toString()}`}
           data={list.items}
-          ListEmptyComponent={<Text className="text-white/70">Empty list</Text>}
+          ListEmptyComponent={
+            <Text className="dark:text-white/70 text-black/70">Empty list</Text>
+          }
           {...sharedListProps}
         />,
       ];
